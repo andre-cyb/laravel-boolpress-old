@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                        <p>all'interno di admin home</p>
                     {{ __('You are logged in!') }}
                 </div>
             </div>

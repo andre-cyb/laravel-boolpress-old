@@ -1,5 +1,7 @@
 <template>
-  <h1>{{ title }}</h1>
+  <div class="my_cont">
+    <h1 class="d-flex justify-content-center">{{ title }}</h1>
+  </div>
 </template>
 <script>
 export default {
