@@ -15,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view("guests.welcome", compact("posts"));
     }
 
     /**
@@ -39,13 +40,10 @@ class PostController extends Controller
         $data = $request->all();
 
         $newPost = new Post();
-        $newPost->title = $data["title"];
-        $newPost->title = $data["subtitle"];
-        $newPost->title = $data["content"];
-        $newPost->title = $data["author"];
-        $newPost->title = $data["coverImg"];
-        $newPost->title = $data["category"];
+        $newPost->fill($request->all());
         $newPost->save();
+        
+        return redirect()->route("admin.posts.index", $newPost->id);
     }
 
     /**
