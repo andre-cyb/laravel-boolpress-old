@@ -34,6 +34,7 @@
   
   <div class="text-center">
     <button type="submit" class="btn btn-success">Crea</button>
+    <a href="{{ route('admin.posts.index') }}">Annulla</a>
   </div>
   </form>
 </div>
