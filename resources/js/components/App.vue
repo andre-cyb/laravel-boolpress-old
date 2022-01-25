@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <header>
@@ -6,19 +7,40 @@
       <h1 class="text">Non fare caso alla grafica scadente</h1>
     </header>
 
-    <main></main>
+    <main>
+      <div class="card" style="width: 18rem">
+        <img src="" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+      </div>
+      <ExampleComponent></ExampleComponent>
+    </main>
 
     <footer></footer>
   </div>
 </template>
 <script>
+import ExampleComponent from "./ExampleComponent.vue";
+
 export default {
+  components: { ExampleComponent },
   name: "app",
   data() {
     return {
       title: "Ciao e Benvenuto nel blog di Boolean",
+      /* postsList = [], */
     };
   },
+  /* mounted(){
+    window.axios.get("/api/posts").then((resp) => {
+      this.postsList = resp.data;
+    })
+  } */
 };
 </script>
 <style scoped>
