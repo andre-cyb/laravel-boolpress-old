@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
-use Carbon\Carbon;
+
 
 class PostController extends Controller
 {
@@ -16,10 +16,6 @@ class PostController extends Controller
      */
     public function index()
     {
-    echo Carbon::now();
-
-    exit();
-
         $posts = Post::all();
         return view("admin.home", compact("posts"));
     }
